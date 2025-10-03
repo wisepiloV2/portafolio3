@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./footer_header/footer_header.js" defer></script>
+  <script src="https://kit.fontawesome.com/210dc8e837.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/footer_header/footer.css">
+  <link rel="stylesheet" href="/footer_header/header.css">
+  <title>Matias Agustin Martinez</title>
+</head>
+<body>
+  <header class="header-container" id="header"></header>
+  <main class="main-container">
+    <section class="project-container long" data-page="geogrid">
+      <h2 class="project-title">Geo Grid</h2>
+      <img class='project-img long' src="geoGrid.png" alt="">
+    </section>
+    <section class="project-container long" data-page="tictactoe">
+      <h2 class="project-title">Tic Tac Toe</h2>
+      <img class='project-img long' src="tictactoe.png" alt="">
+    </section>
+    <section class="project-container wide" data-page="pasapalabra">
+      <h2>Pasa Palabra</h2>
+      <img class='project-img wide' src="pasaPalabra.png" alt="">
+    </section>
+  </main>
+  <footer class="footer-container" id="footer"></footer>
+  <style>
+body{
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  gap: 50px;
+}
+
+.project-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  color: #eee;
+  border: 2px solid #eee;
+}
+
+.project-container:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 12px #000;
+  transition: 0.2s;
+  color: rgb(255, 153, 0);
+}
+
+.project-title{
+  font-family: 'Montserrat','Roboto', sans-serif;
+}
+
+.project-container.long{
+  flex: 0 0 45%;
+}
+
+.project-img.long{
+  max-width: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.project-img.wide{
+  max-width: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+  </style>
+  <script src="./redirectPage.js"></script>
+</body>
+</html>

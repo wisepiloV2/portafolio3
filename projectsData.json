@@ -1,0 +1,394 @@
+{ 
+  "pages": [
+    {
+      "page": "geogrid",
+      "main": [
+        {
+          "type": "title",
+          "level": 1,
+          "content": "Geo Grid"
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": "¿De qué trata?"
+        },
+        {
+          "type": "p",
+          "content": "Geo Grid es una web que utiliza una API para obtener las banderas. Consiste en un juego donde se muestran distintas banderas y el usuario debe colocar el nombre correcto. Además, se manejan las distintas formas en las que el usuario puede escribir la respuesta para aceptarlas como válidas."
+        },
+        {
+          "type": "title",
+          "level": 3,
+          "content": "Diseño"
+        },
+        {
+          "type": "p",
+          "content": "Se utilizó un formato de clases para manejar las distintas funcionalidades"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "class GameLogic{}"
+        },
+        {
+          "type": "p",
+          "content": "Encargada de normalizar y verificar la respuesta"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "class GameUI{}"
+        },
+        {
+          "type": "p",
+          "content": "Encargada de mostrar los cambios en la interfaz"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "class DataProcess{}"
+        },
+        {
+          "type": "p",
+          "content": "Procesa los datos necesarios para iniciar el juego en base a la elección de dificultad pasada por el controlador"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "class GameControl{}"
+        },
+        {
+          "type": "p",
+          "content": "Maneja la interacción entre los distintas clases y las acciones del usuario"
+        },
+        {
+          "type": "title",
+          "level": 3,
+          "content": "Algunas implementaciones"
+        },
+        {
+          "type": "p",
+          "content": "Para cargar una imagen de la bandera se usa:"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "async loadImg(countryCode) {\n  countryCode = countryCode.toLowerCase()\n  const dataImg = `\n    <img src=\"https://flagcdn.com/96x72/${countryCode}.png\" alt=\"Bandera\">`\n  return dataImg\n}"
+        },
+        {
+          "type": "p",
+          "content": "Para normalizar la respuesta del usuario:"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "normalizeAnswer(answer) {\n  return answer\n    .toLowerCase()\n    .normalize(\"NFD\")\n    .replace(/[\\u0300-\\u036f]/g, \"\")\n    .replace(/\\s+/g, \"\")\n}"
+        },
+        {
+          "type": "p",
+          "content": "También se definen niveles de dificultad con ponderaciones:"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "const typesDificulty = {\n  easy: [10],\n  normal: [8, 7],\n  hard: [5],\n  expert: [5]\n}"
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": "Tecnologías"
+        },
+        {
+          "type": "list",
+          "items": [
+            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"},
+            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"},
+            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"}
+          ]
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": "Enlaces"
+        },
+        {
+          "type": "list",
+          "items": [
+            {"type": "link", "href": "#", "content": "Repositorio"},
+            {"type": "link", "href": "#", "content": "Dónde probarlo"}
+          ]
+        }
+      ]
+    },
+    {
+      "page": "tictactoe",
+      "main": [
+        {
+          "type": "title",
+          "level": 1,
+          "content": "Tic Tac Toe"
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": "¿De qué trata?"
+        },
+        {
+          "type": "p",
+          "content": "Una web simple para jugar <em>Tic Tac Toe</em> en modo local contra otra persona en la misma máquina o contra un bot. Diseño responsivo, accesible y pensado para partidas rápidas: iniciar, jugar, ver el resultado y volver a jugar."
+        },
+        {
+          "type": "title",
+          "level": 3,
+          "content": "Diseño"
+        },
+        {
+          "type": "p",
+          "content": "Se utilizó un formato de clases para manejar las distintas funcionalidades"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "class Bot{}"
+        },
+        {
+          "type": "p",
+          "content": "Representa a la inteligencia artificial del juego."
+        },
+        {
+          "type": "p",
+          "content": "Decide la jugada de la máquina: primero intenta ganar o bloquear al rival (tryWinOrBlock), si no puede, elige el centro o una casilla aleatoria (randomMove)."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "class Board{}"
+        },
+        {
+          "type": "p",
+          "content": "Maneja el estado del tablero."
+        },
+        {
+          "type": "p",
+          "content": "Se encarga de llenarlo, verificar si está completo, si hay un ganador y devolver qué combinación ganó."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "class TicTacToe{}"
+        },
+        {
+          "type": "p",
+          "content": "Controla la lógica del turno de los jugadores."
+        },
+        {
+          "type": "p",
+          "content": "Inserta jugadas en el tablero, actualiza la interfaz (UI), cambia de turno y reinicia el juego cuando termina."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "class GameController{}"
+        },
+        {
+          "type": "p",
+          "content": "Administra la interfaz de usuario."
+        },
+        {
+          "type": "p",
+          "content": "Se asegura de que el jugador configure bien la partida antes de empezar y comunica esas opciones al GameController."
+        },
+        {
+          "type": "title",
+          "level": 3,
+          "content": "Algunas implementaciones"
+        },
+        {
+          "type": "p",
+          "content": "Cómo el bot revisa las combinaciones ganadoras y decide su jugada:"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "findWinningMove(board, turn) {\n  for (const [a, b, c] of this.winningCombinations) {\n    const line = [board[a], board[b], board[c]];\n    const positions = [a, b, c];\n\n    const countTurn = line.filter(box => box === turn).length;\n    const countEmpty = line.filter(box => box === \"\").length;\n\n    if (countTurn === 2 && countEmpty === 1) {\n      return positions[line.indexOf(\"\")];\n    }\n  }\n  return null;\n}"
+        },
+        {
+          "type": "p",
+          "content": "Cómo el Board detecta si hay un ganador:"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "checkWinner() {\n  return this.winningCombinations.some(([a, b, c]) => {\n    const val = this.board[a];\n    return val !== \"\" && val === this.board[b] && val === this.board[c];\n  });\n}"
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": "Tecnologías"
+        },
+        {
+          "type": "list",
+          "items": [
+            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"},
+            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"},
+            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"}
+          ]
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": "Enlaces"
+        },
+        {
+          "type": "list",
+          "items": [
+            {"type": "link", "href": "#", "content": "Repositorio"},
+            {"type": "link", "href": "#", "content": "Dónde probarlo"}
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pasapalabra",
+      "main": [
+        {
+          "type": "title",
+          "level": 1,
+          "content": "Pasapalabra"
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": "¿De qué trata?"
+        },
+        {
+          "type": "p",
+          "content": "Inspirado en el clásico juego de televisión Pasapalabra, donde el jugador debe responder correctamente a una serie de preguntas asociadas a cada letra del abecedario, avanzando en la ruleta hasta completar todas las respuestas o agotar el tiempo."
+        },
+        {
+          "type": "title",
+          "level": 3,
+          "content": "Diseño"
+        },
+        {
+          "type": "p",
+          "content": "Se utilizó un formato basado en clases para manejar las distintas funcionalidades. A diferencia de otros proyectos, aquí no hay una clase Data dedicada a la gestión de datos ni una clase que unifique todas las demás; en su lugar, esa lógica se resolvió mediante funciones. Fue uno de mis primeros proyectos tratando de separar responsabilidades en la web usando clases, por lo tanto no es de los mas claros/entendibles en código."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "loadData(){}\nextractPromptsFromData(){}"
+        },
+        {
+          "type": "p",
+          "content": "Funciones de manejo de datos."
+        },
+        {
+          "type": "p",
+          "content": "Aquí ocurre la entrada de datos externos al sistema. El JSON se transforma en un formato estándar que luego consumen GameLogic y GameUI."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "startLogicAndUI(){}\nrestartLogicAndUI(){}\ncheckGameFinished(){}"
+        },
+        {
+          "type": "p",
+          "content": "Funciones de utilidad."
+        },
+        {
+          "type": "p",
+          "content": "Inician y reinician el juego, chequean si ya terminó, procesan entradas del usuario (respuestas y pases). Estas son algunas de las funciones que deberian estar en la clase Controller no implementada."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "class GameLogic{}"
+        },
+        {
+          "type": "p",
+          "content": "Es el motor lógico del juego."
+        },
+        {
+          "type": "p",
+          "content": "Lleva el control de las respuestas pendientes, correctas o erróneas, define cómo se avanza de una letra/pregunta a otra, normaliza texto para comparar respuestas."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "class GameUI{}"
+        },
+        {
+          "type": "p",
+          "content": "Es el controlador de la interfaz gráfica."
+        },
+        {
+          "type": "p",
+          "content": "Muestra las preguntas y opciones al usuario, marca respuestas correctas/incorrectas visualmente, administra el temporizador, maneja categorías y la ruleta de letras."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "//Eventos\nbotones.addEventListener();"
+        },
+        {
+          "type": "p",
+          "content": "Conectan la interacción del usuario (clicks, teclas) con el sistema."
+        },
+        {
+          "type": "p",
+          "content": "Detectan clicks en botones (Config, Restart, HowToPlay), detectan teclas (Enter para enviar respuesta, Pass para saltar). Teoricamente tambien deberian estar dentro de la clase controller no implementada."
+        },
+        {
+          "type": "title",
+          "level": 3,
+          "content": "Algunas implementaciones"
+        },
+        {
+          "type": "p",
+          "content": "Cómo se validan las respuestas y se avanza en la ruleta."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "checkAnswer(answer) {\n  answer = this.textNormalize(answer)\n  const correctAnswer = this.getCurrentAnswer()\n  if (answer === correctAnswer) {\n    this.changeStateAnswer(this.answerCorrect)\n  } else {\n    this.changeStateAnswer(this.answerWrong)\n  }\n  return {\n    index: this.currentPosition,\n    state: this.getCurrentState(),\n    nextIndex: this.moveToNextUnansweredLetter()\n  }\n}"
+        },
+        {
+          "type": "p",
+          "content": "Cómo se cargan los datos y se transforman de forma dinamica desde el JSON."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "async function loadData(category = 'mix') {\n  const res = await fetch('./dataJson.json')\n  const data = await res.json()\n  return {\n    data: extractPromptsFromData(data[category]),\n    categories: Object.keys(data)\n  }\n}\n\nfunction extractPromptsFromData(dataList) {\n  return dataList.map(item => {\n    return {\n      prompt: item[0],\n      answer: item[1]\n    }\n  })\n}"
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": "Tecnologías"
+        },
+        {
+          "type": "list",
+          "items": [
+            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"},
+            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"},
+            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"}
+          ]
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": "Enlaces"
+        },
+        {
+          "type": "list",
+          "items": [
+            {"type": "link", "href": "#", "content": "Repositorio"},
+            {"type": "link", "href": "#", "content": "Dónde probarlo"}
+          ]
+        }
+      ]
+    }
+  ]
+}

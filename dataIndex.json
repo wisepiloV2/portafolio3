@@ -1,0 +1,19 @@
+{
+  "projects": [
+    {
+      "name": "pasapalabra",
+      "content": [
+        {
+          "type": "title",
+          "level": 1,
+          "content": "Pasapalabra"
+        },
+        {
+          "type": "image",
+          "sizeType": "wide", 
+          "src": "pasaPalabra.png"
+        }
+      ]
+    }
+  ]
+}
