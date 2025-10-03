@@ -14,6 +14,36 @@
           "src": "pasaPalabra.png"
         }
       ]
+    },
+    {
+      "name": "geogrid",
+      "content":[
+        {
+          "type": "title",
+          "level": 1,
+          "content": "Geo Grid"
+        },
+        {
+          "type": "image",
+          "sizeType": "long", 
+          "src": "geoGrid.png"
+        }
+      ]
+    },
+    {
+      "name": "tictactoe",
+      "content":[
+        {
+          "type": "title",
+          "level": 1,
+          "content": "Tic Tac Toe"
+        },
+        {
+          "type": "image",
+          "sizeType": "long", 
+          "src": "tictactoe.png"
+        }
+      ]
     }
   ]
 }
