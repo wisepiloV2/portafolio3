@@ -12,9 +12,22 @@
   justify-content: space-around;
   font-size: 1.3rem;
 }
+
+.header-item{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 .header-item:hover{
   cursor: pointer;
   transform: scale(1.1);
   transition: 0.2s;
   color: rgb(255, 153, 0);
+}
+
+@media (max-width: 450px) {
+  .header-item-text{
+    display: none;
+  }
 }
