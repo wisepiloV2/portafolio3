@@ -1,8 +1,8 @@
-{ 
+{
   "pages": [
     {
       "page": "geogrid",
-      "main": [
+      "data": [
         {
           "type": "title",
           "level": 1,
@@ -60,7 +60,7 @@
         },
         {
           "type": "p",
-          "content": "Maneja la interacción entre los distintas clases y las acciones del usuario"
+          "content": "Maneja la interacción entre las distintas clases y las acciones del usuario"
         },
         {
           "type": "title",
@@ -102,9 +102,9 @@
         {
           "type": "list",
           "items": [
-            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"},
-            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"},
-            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"}
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" }
           ]
         },
         {
@@ -115,15 +115,15 @@
         {
           "type": "list",
           "items": [
-            {"type": "link", "href": "#", "content": "Repositorio"},
-            {"type": "link", "href": "#", "content": "Dónde probarlo"}
+            { "type": "link", "href": "#", "content": "Repositorio" },
+            { "type": "link", "href": "#", "content": "Dónde probarlo" }
           ]
         }
       ]
     },
     {
       "page": "tictactoe",
-      "main": [
+      "data": [
         {
           "type": "title",
           "level": 1,
@@ -154,7 +154,7 @@
         },
         {
           "type": "p",
-          "content": "Representa a la inteligencia artificial del juego."
+          "content": { "type": "strong", "text": "Representa a la inteligencia artificial del juego." }
         },
         {
           "type": "p",
@@ -230,9 +230,9 @@
         {
           "type": "list",
           "items": [
-            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"},
-            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"},
-            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"}
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" }
           ]
         },
         {
@@ -243,15 +243,15 @@
         {
           "type": "list",
           "items": [
-            {"type": "link", "href": "#", "content": "Repositorio"},
-            {"type": "link", "href": "#", "content": "Dónde probarlo"}
+            { "type": "link", "href": "#", "content": "Repositorio" },
+            { "type": "link", "href": "#", "content": "Dónde probarlo" }
           ]
         }
       ]
     },
     {
       "page": "pasapalabra",
-      "main": [
+      "data": [
         {
           "type": "title",
           "level": 1,
@@ -273,7 +273,7 @@
         },
         {
           "type": "p",
-          "content": "Se utilizó un formato basado en clases para manejar las distintas funcionalidades. A diferencia de otros proyectos, aquí no hay una clase Data dedicada a la gestión de datos ni una clase que unifique todas las demás; en su lugar, esa lógica se resolvió mediante funciones. Fue uno de mis primeros proyectos tratando de separar responsabilidades en la web usando clases, por lo tanto no es de los mas claros/entendibles en código."
+          "content": "Se utilizó un formato basado en clases para manejar las distintas funcionalidades. A diferencia de otros proyectos, aquí no hay una clase Data dedicada a la gestión de datos ni una clase que unifique todas las demás; en su lugar, esa lógica se resolvió mediante funciones. Fue uno de mis primeros proyectos tratando de separar responsabilidades en la web usando clases, por lo tanto no es de los más claros/entendibles en código."
         },
         {
           "type": "code",
@@ -299,7 +299,7 @@
         },
         {
           "type": "p",
-          "content": "Inician y reinician el juego, chequean si ya terminó, procesan entradas del usuario (respuestas y pases). Estas son algunas de las funciones que deberian estar en la clase Controller no implementada."
+          "content": "Inician y reinician el juego, chequean si ya terminó, procesan entradas del usuario (respuestas y pases). Estas son algunas de las funciones que deberían estar en la clase Controller no implementada."
         },
         {
           "type": "code",
@@ -338,7 +338,7 @@
         },
         {
           "type": "p",
-          "content": "Detectan clicks en botones (Config, Restart, HowToPlay), detectan teclas (Enter para enviar respuesta, Pass para saltar). Teoricamente tambien deberian estar dentro de la clase controller no implementada."
+          "content": "Detectan clicks en botones (Config, Restart, HowToPlay), detectan teclas (Enter para enviar respuesta, Pass para saltar). Teóricamente también deberían estar dentro de la clase controller no implementada."
         },
         {
           "type": "title",
@@ -356,7 +356,7 @@
         },
         {
           "type": "p",
-          "content": "Cómo se cargan los datos y se transforman de forma dinamica desde el JSON."
+          "content": "Cómo se cargan los datos y se transforman de forma dinámica desde el JSON."
         },
         {
           "type": "code",
@@ -371,9 +371,9 @@
         {
           "type": "list",
           "items": [
-            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"},
-            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"},
-            {"type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"}
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" }
           ]
         },
         {
@@ -384,8 +384,8 @@
         {
           "type": "list",
           "items": [
-            {"type": "link", "href": "#", "content": "Repositorio"},
-            {"type": "link", "href": "#", "content": "Dónde probarlo"}
+            { "type": "link", "href": "#", "content": "Repositorio" },
+            { "type": "link", "href": "#", "content": "Dónde probarlo" }
           ]
         }
       ]

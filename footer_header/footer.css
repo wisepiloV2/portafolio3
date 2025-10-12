@@ -1,46 +1,75 @@
-.footer-container{
-  padding: 10px;
+.footer-container {
+  padding: 20px;
   width: 90vw;
+  max-width: 1000px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
   gap: 20px;
+  margin: 30px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-.footer-title{
-  font-family: 'Montserrat','Roboto', sans-serif;
+
+/* Título */
+.footer-title {
+  font-family: 'Montserrat', 'Roboto', sans-serif;
   text-align: center;
   font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
 }
-.footer-list{
+
+/* Lista principal */
+.footer-list {
   list-style: none;
   display: flex;
   justify-content: space-around;
-  font-size: 1.3rem;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  font-size: 1.2rem;
 }
 
-.footer-item{
+/* Ítems del footer */
+.footer-item {
   display: flex;
   gap: 10px;
   align-items: center;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.footer-item:hover{
+.footer-item:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: 0.2s;
   color: rgb(255, 153, 0);
 }
 
-@media (max-width: 450px) {
-  .footer-list{
-    display: flex;
+/* Iconos opcionales */
+.footer-item i {
+  font-size: 1.3rem;
+}
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+  .footer-list {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
   }
-  .footer-item:nth-of-type(4){
+}
+
+@media (max-width: 450px) {
+  .footer-list {
+    gap: 10px;
+  }
+
+  .footer-item:nth-of-type(4) {
     display: none;
+  }
+
+  .footer-title {
+    font-size: 1.1rem;
   }
 }

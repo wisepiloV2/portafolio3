@@ -19,84 +19,182 @@
     }
 
     body {
-      color: #eaeaea;  
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      color: #eaeaea;
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
-      padding: 2rem;
+      background-image: url("/img/background.png");
+      background-size: cover;             
+      background-repeat: no-repeat;    
+      background-position: center; 
     }
 
-    h1, h2, h3 {
+.title-lvl1, .title-lvl2, .title-lvl3{
       font-family: 'Montserrat', sans-serif;
     }
 
-    h1 {
+    .title-lvl1 {
       text-align: center;
       font-size: 2.5rem;
       color: #fff;
     }
 
-    h2 {
+    .title-lvl2 {
       font-size: 1.8rem;
       color: #fff;
     }
 
-    h3 {
+    .title-lvl3 {
       font-size: 1.4rem;
       color: #fff; 
-      margin-top: 1.5rem;
+      margin: 1.5rem 0 0.5rem 0;
     }
 
-    p {
+    .text {
       margin-bottom: 1rem;
       color: #d0d0d0;
     }
 
-    ul {
+    .list {
       list-style: none;
       display: flex;
       gap: 20px;
     }
-    li img{
+
+    .list-descriptions {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 1rem;
+      color: #d0d0d0;
+      line-height: 1.6;
+    }
+
+    .list-descriptions strong {
+      color: #eee;             
+      font-weight: 600;           
+      letter-spacing: 0.3px;       
+    }
+
+    .list-descriptions li {
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .list-descriptions li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: #ffff;             
+      font-weight: bold;
+    }
+    .list-item-img{
       height: 50px;
     }
 
-
-    a {
+    .link {
       color: #4da6ff;
       text-decoration: none;
     }
 
-    a:hover {
+    .link:hover {
       text-decoration: underline;
     }
 
-    pre {
+    .code-pre {
       background: #111;
       padding: 1rem;
       border-radius: 8px;
       overflow-x: auto;
       margin-bottom: 1.5rem;
     }
-
-
-    .main {
-      max-width: 800px;
+    .project-main {
+      max-width: 1000px;
+      width: 90vw;
       margin: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .bold {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    @media (max-width: 735px) {
     }
   </style>
 </head>
 <body>
-  <main class="main">
-    <h1 class="title">Pasapalabra</h1>
-    <h2 class="title">¿De qué trata?</h2>
-    <p>
-      Inspirado en el clásico juego de televisión Pasapalabra, donde el jugador debe responder correctamente a una serie de preguntas asociadas a cada letra del abecedario, avanzando en la ruleta hasta completar todas las respuestas o agotar el tiempo.
+  <main class="project-main">
+    <h1 class="title-lvl1">Pasapalabra</h1>
+    <h2 class="title-lvl2">¿De qué trata?</h2>
+    <p class="text">WisepiloBlogs es una aplicación web para la gestión de blogs personales.
+Permite a los usuarios registrarse, iniciar sesión, crear, editar y eliminar publicaciones, además de visualizar blogs públicos o personales con un editor de texto enriquecido.
+El proyecto está desarrollado con Node.js y Express, y sigue una arquitectura modular basada en controladores, modelos y rutas para facilitar el mantenimiento y escalabilidad.</p>
+
+    <h3 class="title-lvl3">Objetivo</h3>
+    <p class="text">Crear una aplicacion web sencilla pero potente para la escritura y gestión de contenido, para aplicar las funcionalidades de una web centrada en el backend, arquitectura de diseño y distribución de código.
     </p>
 
-    <h3 class="title">Diseño</h3>
-    <p>
-      Se utilizó un formato basado en clases para manejar las distintas funcionalidades. A diferencia de otros proyectos, aquí no hay una clase Data dedicada a la gestión de datos ni una clase que unifique todas las demás; en su lugar, esa lógica se resolvió mediante funciones. Fue uno de mis primeros proyectos tratando de separar responsabilidades en la web usando clases, por lo tanto no es de los mas claros/entendibles en código.
-    </p>
+    <h3 class="title-lvl3">Funcionalidades implementadas</h3>
+    <ul class="list-descriptions">
+      <li>
+        <strong>Autenticación de usuarios:</strong> registro, login y manejo de sesiones con JWT.
+      </li>
+      <li>
+        <strong>Gestión de publicaciones:</strong> creación, edición y eliminación de entradas de blog.
+      </li>
+      <li>
+        <strong>Editor enriquecido:</strong> integrado con Quill.js para permitir formato de texto, imágenes y enlaces.
+      </li>
+      <li>
+        <strong>Subida de imágenes: </strong>manejo de archivos con Multer.
+      </li>
+      <li>
+        <strong>Seguridad:</strong> sanitización de HTML con sanitize-html para evitar XSS.
+      </li>
+      <li>
+        <strong>Contraseñas seguras:</strong> encriptadas con Bcryptjs.
+      </li>
+      <li>
+        <strong>Gestión de cookies y tokens: </strong>mediante cookie-parser y utilidades personalizadas.
+      </li>
+      <li>
+        <strong>Validación de datos: </strong>mediante esquemas definidos.
+      </li>
+    </ul>
+
+    <h2 class="title-lvl3">Tecnologías</h2>
+    <ul class="list">
+      <li>
+        <img class="list-item-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+      </li>
+      <li>
+        <img  class="list-item-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+      </li>
+      <li>
+        <img class="list-item-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+      </li>
+    </ul>
+
+    <h2 class="title-lvl3">Enlaces</h2>
+    <ul class="list">
+      <li><a class="link" href="#">Repositorio</a></li>
+      <li><a class="link" href="#">Dónde probarlo</a></li>
+    </ul>
+  </main>
+</body>
+</html>
+
+<!-- 
     <pre><code class="language-javascript">
 loadData(){} 
 extractPromptsFromData(){}
@@ -126,7 +224,7 @@ botones.addEventListener();
     </code></pre>
     <p>Conectan la interacción del usuario (clicks, teclas) con el sistema.</p>
     <p>Detectan clicks en botones (Config, Restart, HowToPlay), detectan teclas (Enter para enviar respuesta, Pass para saltar). Teoricamente tambien deberian estar dentro de la clase controller no implementada.</p>
-    <h3 class="title">Algunas implementaciones</h3>
+    <h3 class="title-lvl3">Algunas implementaciones</h3>
     <p>Muestra que sabes cargar y transformar datos dinámicamente, en vez de tenerlos “hardcodeados”.</p>
     <pre><code class="language-javascript">
 async function loadData(category = 'mix') {
@@ -164,25 +262,4 @@ checkAnswer(answer) {
     nextIndex: this.moveToNextUnansweredLetter()
   }
 }
-    </code></pre>
-    <h2 class="title">Tecnologías</h2>
-    <ul>
-      <li>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-      </li>
-      <li>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-      </li>
-      <li>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-      </li>
-    </ul>
-
-    <h2 class="title">Enlaces</h2>
-    <ul>
-      <li><a href="#">Repositorio</a></li>
-      <li><a href="#">Dónde probarlo</a></li>
-    </ul>
-  </main>
-</body>
-</html>
+    </code></pre> --> 
