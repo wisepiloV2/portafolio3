@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="./footer_header/footer_header.js" defer></script>
+  <script src="/footer_header/footer_header.js" defer></script>
   <script src="https://kit.fontawesome.com/210dc8e837.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/footer_header/footer.css">
   <link rel="stylesheet" href="/footer_header/header.css">
+  <link rel="stylesheet" href="/styles/index.css">
   <title>Matias Agustin Martinez</title>
 </head>
 <body>
@@ -15,138 +16,18 @@
   <main class="main-container">
     <section class="project-container long" data-page="geogrid">
       <h2 class="project-title">Geo Grid</h2>
-      <img class='project-img long' src="/img/project/geoGrid.png" alt="">
+      <img class='project-img long' src="/img/projects/geoGrid.png" alt="">
     </section>
     <section class="project-container long" data-page="tictactoe">
       <h2 class="project-title">Tic Tac Toe</h2>
-      <img class='project-img long' src="/img/project/tictactoe.png" alt="">
+      <img class='project-img long' src="/img/projects/tictactoe.png" alt="">
     </section>
     <section class="project-container wide" data-page="pasapalabra">
       <h2>Pasa Palabra</h2>
-      <img class='project-img wide' src="/img/project/pasaPalabra.png" alt="">
+      <img class='project-img wide' src="/img/projects/pasaPalabra.png" alt="">
     </section>
   </main>
   <footer class="footer-container" id="footer"></footer>
-  <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #fff;
-  background-image: url("/img/background.png"); 
-  background-size: cover;             
-  background-repeat: no-repeat;  
-  background-position: center; 
-  min-height: 100vh;
-}
-
-/* Contenedor principal */
-.main-container {
-  display: flex;
-  flex-wrap: wrap;  
-  justify-content: center;
-  gap: 20px;
-  width: 90%;
-  max-width: 1000px;
-  margin: 30px auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* Cada tarjeta de proyecto */
-.project-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 10px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-container:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
-/* Título de cada proyecto */
-.project-title {
-  font-family: 'Montserrat', 'Roboto', sans-serif;
-  font-size: 1.2rem;
-  margin-top: 10px;
-  text-align: center;
-}
-
-/* Imagen de cada proyecto */
-.project-img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 20px;
-  object-fit: cover;
-  padding: 10px;
-}
-
-/* Clases específicas */
-.project-img.long {
-  max-width: 250px;
-}
-
-.project-img.wide {
-  max-width: 500px;
-}
-
-/* 🔹 Responsividad */
-@media (max-width: 768px) {
-  .main-container {
-    width: 95%;
-    padding: 15px;
-  }
-
-  .project-container {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .project-img {
-    max-width: 100%;
-  }
-
-  .project-title {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
-  .main-container {
-    gap: 15px;
-    padding: 10px;
-  }
-
-  .project-container {
-    padding: 8px;
-  }
-
-  .project-title {
-    font-size: 0.9rem;
-  }
-}
-
-  </style>
-  <script src="./redirectPage.js"></script>
+  <script src="/scripts/redirectPage.js"></script>
 </body>
 </html>

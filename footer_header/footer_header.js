@@ -14,18 +14,12 @@ function goToInit() {
   window.location = "#header"
 }
 
-fetch("/footer_header/footer.html")
-  .then(response => response.text())
-  .then(data => {
-    document.querySelector(".footer-container").innerHTML = data;
-  });
+async function loadComponent(id, filePath) {
+  const container = document.querySelector(id);
+  const response = await fetch(filePath);
+  const html = await response.text();
+  container.innerHTML = html;
+}
 
-
-fetch("/footer_header/header.html")
-  .then(response => response.text())
-  .then(data => {
-    document.querySelector(".header-container").innerHTML = data;
-
-    const btnsHeader = document.querySelectorAll('.header-item');
-
-  });
+loadComponent(".header-container", "/footer_header/header.html");
+loadComponent(".footer-container", "/footer_header/footer.html");
