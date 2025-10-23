@@ -1,18 +1,15 @@
-/* Contenedor principal del Header */
 .header-container {
-  /* Propiedades de Contenedor Similares al Footer */
-  padding: 15px 20px; /* Padding robusto */
+  padding: 15px 20px; 
   max-width: 960px;
   width: 90vw;
   margin: 20px auto 0;
   border-radius: 10px;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.7); /* Opacidad similar */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra similar al footer */
-  backdrop-filter: blur(5px); /* Efecto "vidrio esmerilado" (opcional) */
+  background-color: rgba(0, 0, 0, 0.7); 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(5px); 
 }
 
-/* Lista de navegación */
 .header-list {
   list-style: none;
   padding: 0;
@@ -23,7 +20,6 @@
   font-size: 1.1rem;
 }
 
-/* Estilo para los enlaces (el área clickeable, similar a .footer-link) */
 .header-link {
   display: flex;
   gap: 8px; 
@@ -32,27 +28,23 @@
   color: inherit; 
   padding: 8px 12px; 
   border-radius: 6px;
-  transition: all 0.3s ease; /* Transición suave como el footer */
+  transition: all 0.3s ease; 
 }
 
-/* Efectos al pasar el ratón (hover) y al enfocar con el teclado (focus) */
 .header-link:hover,
 .header-link:focus {
-  /* Efectos de interacción similares al footer */
-  outline: 2px solid rgb(255, 153, 0); /* Indica el foco de forma accesible */
+  outline: 2px solid rgb(255, 153, 0);
   outline-offset: 2px;
   background-color: rgba(255, 255, 255, 0.05);
-  transform: translateY(-2px); /* Un sutil levantamiento */
+  transform: translateY(-2px);
   color: rgb(255, 153, 0); 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para los íconos */
 .header-item-icon {
   font-size: 1.3rem;
 }
 
-/* 📱 Media Query para móviles */
 @media (max-width: 550px) {
   .header-container {
     padding: 10px 0; 
@@ -65,12 +57,10 @@
     justify-content: space-around;
   }
 
-  /* Oculta el texto en pantallas pequeñas, dejando solo el ícono */
   .header-item-text {
     display: none;
   }
   
-  /* Ajusta el tamaño y el padding de los enlaces solo con el ícono */
   .header-link {
     padding: 10px 5px; 
     gap: 0;
