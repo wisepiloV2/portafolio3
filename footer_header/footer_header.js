@@ -2,24 +2,67 @@ function goToHome() {
   window.location.href = "/index.html";
 }
 
-function goToAboutMe() {
-  window.location.href = "#"
+/** 
+ * @param {string} targetId 
+ */
+function scrollToTarget(targetId) {
+  const targetElement = document.querySelector(targetId);
+
+  if (targetElement) {
+    targetElement.scrollIntoView({
+      behavior: 'smooth', 
+      block: 'start'       
+    });
+  } else {
+    console.error(`Elemento con ID ${targetId} no encontrado para el scroll.`);
+    window.location.href = targetId;
+  }
 }
 
-function goToContact() {
-  window.location = "#footer"
-}
-
-function goToInit() {
-  window.location = "#header"
-}
 
 async function loadComponent(id, filePath) {
   const container = document.querySelector(id);
-  const response = await fetch(filePath);
-  const html = await response.text();
-  container.innerHTML = html;
+  
+  if (container) {
+    try {
+      const response = await fetch(filePath);
+      if (!response.ok) {
+          throw new Error(`Error al cargar el componente: ${response.statusText}`);
+      }
+      const html = await response.text();
+      container.innerHTML = html;
+      
+      if (id === ".footer-container") {
+          setupSmoothScrollListeners();
+      }
+
+    } catch (error) {
+        console.error(`Fallo en la carga del componente ${filePath}:`, error);
+    }
+  } else {
+      console.warn(`Contenedor ${id} no encontrado en el DOM.`);
+  }
 }
 
-loadComponent(".header-container", "/footer_header/header.html");
+
+function setupSmoothScrollListeners() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            
+            
+            if (href === '#' || href === '#top') {
+              e.preventDefault();
+              scrollToTarget('body');
+            } else if (href.length > 1) {
+              
+              e.preventDefault();
+              scrollToTarget(href);
+            }
+        });
+    });
+}
+
+
+loadComponent(".header-container", "/footer_header/header.html"); 
 loadComponent(".footer-container", "/footer_header/footer.html");
