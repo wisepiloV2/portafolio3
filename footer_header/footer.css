@@ -1,7 +1,7 @@
 :root {
   --max-width-content: 1000px;
   --spacing-lg: 20px; 
-  --background-color:#f3f4f6;
+  --background-color:#fefefe;
   --container-color:#ffffff;
   --border-color:#f3f4f6;
   --title-color:#1f2937;
@@ -27,8 +27,6 @@
   --moon-color: var(--title-color);
   --sun-color: var(--text-color);
 }
-
-
 
 .footer-container {
   padding: 10px 20px; 

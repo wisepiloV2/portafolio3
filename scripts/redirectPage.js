@@ -1,4 +1,4 @@
-const projects = document.querySelectorAll('.project-container');
+const projects = document.querySelectorAll('.project-card-simple');
 
 projects.forEach(project => {
   project.addEventListener('click', () => {
