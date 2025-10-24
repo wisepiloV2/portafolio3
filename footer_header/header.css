@@ -1,12 +1,12 @@
 .header-container {
   padding: 15px 20px; 
-  max-width: 960px;
+  max-width: var(--max-width-content);
   width: 90vw;
   margin: 20px auto 0;
   border-radius: 10px;
   color: var(--text-color);
   background-color: var(--container-color); 
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 4px 15px var(--shadow-static); 
   backdrop-filter: blur(5px); 
   display: flex;
   justify-content: space-between;

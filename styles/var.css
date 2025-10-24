@@ -14,7 +14,7 @@
   --moon-color: var(--title-color);
   --sun-color: var(--text-color);
 }
-
+ 
 .dark-theme{
   --background-color:#111827;
   --container-color:#1f2937;
