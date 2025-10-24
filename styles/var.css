@@ -10,9 +10,7 @@
   --action-hover:#1d4ed8;
   --shadow-static: rgba(31, 41, 55, 0.4);
   --shadow-hover: rgba(31, 41, 55, 0.5); 
-  --icon-color: var(--title-color); 
-  --moon-color: var(--title-color);
-  --sun-color: var(--text-color);
+  --icon-color: var(--text-color); 
 }
  
 .dark-theme{
@@ -23,7 +21,5 @@
   --text-color:#9ca3af;
   --action-color:#2563eb;
   --action-hover:#1d4ed8;
-  --icon-color: var(--title-color); 
-  --moon-color: var(--title-color);
-  --sun-color: var(--text-color);
+  --icon-color: var(--text-color); 
 }

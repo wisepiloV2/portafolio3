@@ -65,6 +65,8 @@
 
 .moon-icon, .sun-icon {
   display: block; 
+  color: var(--icon-color);
+  transform: translateY(-2px);
   transition: opacity 0.3s, color 0.3s; 
 }
 
@@ -78,7 +80,7 @@ body.dark-theme .moon-icon {
 
 body.dark-theme .sun-icon {
   display: block;
-  color: var(--sun-color); 
+  color: var(--icon-color);
 }
 
 @media (max-width: 550px) {
