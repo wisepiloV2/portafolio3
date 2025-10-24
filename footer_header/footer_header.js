@@ -31,6 +31,10 @@ async function loadComponent(id, filePath) {
       }
       const html = await response.text();
       container.innerHTML = html;
+
+      if (id === ".header-container") {
+                setupThemeToggle(); 
+            }
       
       if (id === ".footer-container") {
           setupSmoothScrollListeners();
@@ -63,6 +67,32 @@ function setupSmoothScrollListeners() {
     });
 }
 
-
 loadComponent(".header-container", "/footer_header/header.html"); 
 loadComponent(".footer-container", "/footer_header/footer.html");
+
+function setupThemeToggle() {
+    const toggleButton = document.getElementById('btn_theme');
+    const body = document.body;
+    
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            
+            const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', currentTheme);
+
+            const moonIcon = document.querySelector('.moon-icon');
+            const sunIcon = document.querySelector('.sun-icon');
+
+            if (body.classList.contains('dark-theme')) {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'block';
+            } else {
+                moonIcon.style.display = 'block';
+                sunIcon.style.display = 'none';
+            }
+        });
+    } else {
+        console.error("Error: El botón de tema (#btn_theme) no se encontró después de cargar el header.");
+    }
+}

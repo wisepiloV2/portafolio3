@@ -1,16 +1,46 @@
+:root {
+  --max-width-content: 1000px;
+  --spacing-lg: 20px; 
+  --background-color:#f3f4f6;
+  --container-color:#ffffff;
+  --border-color:#f3f4f6;
+  --title-color:#1f2937;
+  --text-color:#4b5563;
+  --action-color:#2563eb;
+  --action-hover:#1d4ed8;
+  --shadow-static: rgba(31, 41, 55, 0.4);
+  --shadow-hover: rgba(31, 41, 55, 0.5); 
+  --icon-color: var(--title-color); 
+  --moon-color: var(--title-color);
+  --sun-color: var(--text-color);
+}
+
+.dark-theme{
+  --background-color:#111827;
+  --container-color:#1f2937;
+  --border-color:#374151;
+  --title-color:#ffffff;
+  --text-color:#9ca3af;
+  --action-color:#2563eb;
+  --action-hover:#1d4ed8;
+  --icon-color: var(--title-color); 
+  --moon-color: var(--title-color);
+  --sun-color: var(--text-color);
+}
+
+
+
 .footer-container {
   padding: 10px 20px; 
   width: 90vw;
   max-width: 1000px;
-  border-radius: 10px 10px 0 0; 
-  background-color: rgba(0, 0, 0, 0.7); 
+  background-color: var(--background-color);
+  border-top:1px solid var(--text-color) ;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px; 
   margin: 30px auto 0;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  color: #fff;
 }
 
 .footer-title {
@@ -18,7 +48,7 @@
   text-align: center;
   font-size: 1.6rem; 
   font-weight: 700;
-  color: #fff;
+  color: var(--text-color);
   margin-bottom: 0;
 }
 
@@ -40,7 +70,7 @@
   gap: 10px;
   align-items: center;
   text-decoration: none;
-  color: inherit; 
+  color: var(--text-color); 
   padding: 5px 10px;
   border-radius: 4px;
   transition: all 0.3s ease; 
@@ -48,11 +78,10 @@
 
 .footer-link:hover,
 .footer-link:focus {
-  outline: 2px solid rgb(255, 153, 0); 
+  outline: 2px solid var(--action-hover); 
   outline-offset: 2px;
   transform: translateY(-3px); 
-  color: rgb(255, 153, 0);
-  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--action-color);
 }
 
 .footer-link i {
@@ -61,8 +90,9 @@
 
 .footer-copyright {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-color);
   margin-top: 10px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
