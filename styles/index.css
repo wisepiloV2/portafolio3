@@ -40,19 +40,18 @@ body {
   text-decoration: none;
   color: inherit; 
   overflow: hidden; 
-  height: 350px; 
+  height: 400px; 
   display: flex;
   gap: 0;
 }
 
 .project-card-simple:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
   box-shadow: 0 8px 25px var(--shadow-hover); 
   cursor: pointer; 
 }
 
 .project-media-col {
-  flex-basis: 40%; 
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -60,18 +59,8 @@ body {
 .project-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.3s ease;
-}
-
-.project-img.long {
-    object-fit:contain;
-    background-color: #000;
-    object-position: center top; 
-}
-
-.project-card-simple:hover .project-img {
-  transform: scale(1.05);
 }
 
 .project-info-col {
@@ -112,7 +101,7 @@ body {
 
 @media (max-width: 650px) {
   .project-card-simple,
-  .project-card-simple.project-card-long {
+  .project-card-simple{
     flex-direction: column; 
     height: auto; 
   }
@@ -124,11 +113,8 @@ body {
   
   .project-img {
     border-right: none;
-    border-bottom: 2px solid var(--color-primary-accent); 
-  }
-  
-  .project-img.long {
-    height: 250px; 
+    object-fit: cover;
+    border-bottom: 2px solid var(--action-hover); 
   }
 
   .project-info-col {

@@ -3,263 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts -->
+  <script src="/footer_header/footer_header.js" defer></script>
+  <script src="https://kit.fontawesome.com/210dc8e837.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
-  <!-- Prism CSS (tema oscuro) -->
+  <link rel="stylesheet" href="/footer_header/footer.css">
+  <link rel="stylesheet" href="/footer_header/header.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <title>Geo Grid</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-      color: #eaeaea;
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      background-image: url("/img/background.png");
-      background-size: cover;             
-      background-repeat: no-repeat;    
-      background-position: center; 
-    }
-
-.title-lvl1, .title-lvl2, .title-lvl3{
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .title-lvl1 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #fff;
-    }
-
-    .title-lvl2 {
-      font-size: 1.8rem;
-      color: #fff;
-    }
-
-    .title-lvl3 {
-      font-size: 1.4rem;
-      color: #fff; 
-      margin: 1.5rem 0 0.5rem 0;
-    }
-
-    .text {
-      margin-bottom: 1rem;
-      color: #d0d0d0;
-    }
-
-    .list {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    .list-descriptions {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 1rem;
-      color: #d0d0d0;
-      line-height: 1.6;
-    }
-
-    .list-descriptions strong {
-      color: #eee;             
-      font-weight: 600;           
-      letter-spacing: 0.3px;       
-    }
-
-    .list-descriptions li {
-      position: relative;
-      padding-left: 1rem;
-    }
-
-    .list-descriptions li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      font-size: 1.5rem;
-      line-height: 1;
-      color: #ffff;             
-      font-weight: bold;
-    }
-    .list-item-img{
-      height: 50px;
-    }
-
-    .link {
-      color: #4da6ff;
-      text-decoration: none;
-    }
-
-    .link:hover {
-      text-decoration: underline;
-    }
-
-    .code-pre {
-      background: #111;
-      padding: 1rem;
-      border-radius: 8px;
-      overflow-x: auto;
-      margin-bottom: 1.5rem;
-    }
-    .project-main {
-      max-width: 1000px;
-      width: 90vw;
-      margin: auto;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 15px;
-    }
-
-    .bold {
-      font-weight: bold;
-      color: #fff;
-    }
-
-    @media (max-width: 735px) {
-    }
-  </style>
+  <link rel="stylesheet" href="/styles/project.css">
+  <link rel="stylesheet" href="/styles/var.css">
+  <title>Proyecto</title>
 </head>
 <body>
+  <header class="header-container" id="header"></header>
   <main class="project-main">
-    <h1 class="title-lvl1">Pasapalabra</h1>
-    <h2 class="title-lvl2">¿De qué trata?</h2>
-    <p class="text">WisepiloBlogs es una aplicación web para la gestión de blogs personales.
-Permite a los usuarios registrarse, iniciar sesión, crear, editar y eliminar publicaciones, además de visualizar blogs públicos o personales con un editor de texto enriquecido.
-El proyecto está desarrollado con Node.js y Express, y sigue una arquitectura modular basada en controladores, modelos y rutas para facilitar el mantenimiento y escalabilidad.</p>
-
-    <h3 class="title-lvl3">Objetivo</h3>
-    <p class="text">Crear una aplicacion web sencilla pero potente para la escritura y gestión de contenido, para aplicar las funcionalidades de una web centrada en el backend, arquitectura de diseño y distribución de código.
-    </p>
-
-    <h3 class="title-lvl3">Funcionalidades implementadas</h3>
-    <ul class="list-descriptions">
-      <li>
-        <strong>Autenticación de usuarios:</strong> registro, login y manejo de sesiones con JWT.
-      </li>
-      <li>
-        <strong>Gestión de publicaciones:</strong> creación, edición y eliminación de entradas de blog.
-      </li>
-      <li>
-        <strong>Editor enriquecido:</strong> integrado con Quill.js para permitir formato de texto, imágenes y enlaces.
-      </li>
-      <li>
-        <strong>Subida de imágenes: </strong>manejo de archivos con Multer.
-      </li>
-      <li>
-        <strong>Seguridad:</strong> sanitización de HTML con sanitize-html para evitar XSS.
-      </li>
-      <li>
-        <strong>Contraseñas seguras:</strong> encriptadas con Bcryptjs.
-      </li>
-      <li>
-        <strong>Gestión de cookies y tokens: </strong>mediante cookie-parser y utilidades personalizadas.
-      </li>
-      <li>
-        <strong>Validación de datos: </strong>mediante esquemas definidos.
-      </li>
+    <h1 class="title-lvl1">WisepiloGames: Una Colección de Juegos Web</h1>
+    <p class="text">Este proyecto es una colección de tres juegos web interactivos desarrollados desde cero para demostrar <strong>proficiencia en JavaScript nativo, diseño modular y patrones de desarrollo.</strong> La plataforma fue diseñada con una arquitectura escalable para asegurar componentes reutilizables y un código limpio.</p>
+    <h2 class="title-lvl2">Habilidades</h2>
+    <ul class="list-text text">
+      <li><strong>Arquitectura Modular (SPA-Like):</strong> Implementación de un sistema de carga dinámica (fetch en JS) para reutilizar Header y Footer (foot-head/), simulando un comportamiento de componente moderno y demostrando manejo de la estructura de la aplicación.</li>
+      <li><strong>Lógica de Negocio Compleja (JS Nativo):</strong> Desarrollo de la lógica de juego con clases (POO en JS) para <strong>separar responsabilidades</strong> (Lógica, UI, Control), como se ve en <strong>Geo-Grid</strong> y <strong>Pasapalabra</strong>.</li>
+      <li><strong>Manipulación de Datos y APIs:</strong> Gestión de archivos JSON como fuente de datos para los juegos y aplicación de lógica de filtrado por dificultad (<strong>Geo-Grid</strong>). Consumo de APIs externas para la carga dinámica de recursos (banderas).</li>
+      <li><strong>Normalización de Datos y UX:</strong> Implementación de una función de <strong>normalización de texto</strong> para respuestas de usuario (eliminar acentos, espacios, mayúsculas) en <strong>Pasapalabra</strong> y <strong>Geo-Grid</strong>, asegurando una mejor experiencia del usuario.</li>
+      <li><strong>Algoritmos y Lógica de IA:</strong> Desarrollo de una IA en <strong>Tic-Tac-Toe</strong> con estrategia de <em>Win-Block-Center</em> que prioriza la victoria y la defensa, mostrando habilidad en la <strong>creación de algoritmos de juego</strong>.</li>
     </ul>
-
-    <h2 class="title-lvl3">Tecnologías</h2>
+    <h2 class="title-lvl2">Tecnologias</h2>
     <ul class="list">
       <li>
-        <img class="list-item-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+        <img class="list-item-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg">
       </li>
       <li>
-        <img  class="list-item-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+        <img class="list-item-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg">
       </li>
       <li>
-        <img class="list-item-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+        <img class="list-item-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg">
       </li>
     </ul>
-
-    <h2 class="title-lvl3">Enlaces</h2>
-    <ul class="list">
-      <li><a class="link" href="#">Repositorio</a></li>
-      <li><a class="link" href="#">Dónde probarlo</a></li>
+    <h2 class="title-lvl2">Enlaces</h2>
+    <ul class="list-text">
+      <li><a class="link" href="#" target="_blank" rel="noopener noreferrer">Github</a></li>
+      <li><a class="link" href="#" target="_blank" rel="noopener noreferrer">Donde probarlo</a></li>
     </ul>
   </main>
+  <script src="/scripts/buildContentProject.js" defer></script>
+  <footer class="footer-container" id="footer"></footer>
 </body>
 </html>
-
-<!-- 
-    <pre><code class="language-javascript">
-loadData(){} 
-extractPromptsFromData(){}
-    </code></pre>
-    <p>Funciones de manejo de datos.</p>
-    <p>Aquí ocurre la entrada de datos externos al sistema. El JSON se transforma en un formato estándar que luego consumen GameLogic y GameUI.</p>
-    <pre><code class="language-javascript">
-startLogicAndUI(){} 
-restartLogicAndUI(){} 
-checkGameFinished(){}
-    </code></pre>
-    <p>Funciones de utilidad.</p>
-    <p>Inician y reinician el juego, chequean si ya terminó, procesan entradas del usuario (respuestas y pases). Estas son algunas de las funciones que deberian estar en la clase Controller no implementada.</p>
-    <pre><code class="language-javascript">
-class GameLogic{}
-    </code></pre>
-    <p>Es el motor lógico del juego.</p>
-    <p>Lleva el control de las respuestas pendientes, correctas o erróneas, define cómo se avanza de una letra/pregunta a otra, normaliza texto para comparar respuestas.</p>
-    <pre><code class="language-javascript">
-class GameUI{}
-    </code></pre>
-    <p>Es el controlador de la interfaz gráfica.</p>
-    <p>Muestra las preguntas y opciones al usuario, marca respuestas correctas/incorrectas visualmente, administra el temporizador, maneja categorías y la ruleta de letras.</p>
-    <pre><code class="language-javascript">
-//Eventos
-botones.addEventListener(); 
-    </code></pre>
-    <p>Conectan la interacción del usuario (clicks, teclas) con el sistema.</p>
-    <p>Detectan clicks en botones (Config, Restart, HowToPlay), detectan teclas (Enter para enviar respuesta, Pass para saltar). Teoricamente tambien deberian estar dentro de la clase controller no implementada.</p>
-    <h3 class="title-lvl3">Algunas implementaciones</h3>
-    <p>Muestra que sabes cargar y transformar datos dinámicamente, en vez de tenerlos “hardcodeados”.</p>
-    <pre><code class="language-javascript">
-async function loadData(category = 'mix') {
-  const res = await fetch('./dataJson.json')
-  const data = await res.json()
-  return {
-    data: extractPromptsFromData(data[category]),
-    categories: Object.keys(data)
-  }
-}
-
-function extractPromptsFromData(dataList) {
-  return dataList.map(item => {
-    return {
-      prompt: item[0],
-      answer: item[1]
-    }
-  })
-}
-    </code></pre>
-
-    <p>Cómo se validan las respuestas y se avanza en la ruleta.</p>
-    <pre><code class="language-javascript">
-checkAnswer(answer) {
-  answer = this.textNormalize(answer)
-  const correctAnswer = this.getCurrentAnswer()
-  if (answer === correctAnswer) {
-    this.changeStateAnswer(this.answerCorrect)
-  } else {
-    this.changeStateAnswer(this.answerWrong)
-  }
-  return {
-    index: this.currentPosition,
-    state: this.getCurrentState(),
-    nextIndex: this.moveToNextUnansweredLetter()
-  }
-}
-    </code></pre> --> 
