@@ -98,6 +98,12 @@ LISTAS Y ENLACES
   }
 }
 
+.list > li > img {
+  width: 60px;
+  height: 60px;
+  display: block; 
+}
+
 .list-item-img {
   height: 40px;
   transition: transform 0.2s;
