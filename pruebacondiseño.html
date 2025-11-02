@@ -1,53 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="/footer_header/footer_header.js" defer></script>
-  <script src="https://kit.fontawesome.com/210dc8e837.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/footer_header/footer.css">
-  <link rel="stylesheet" href="/footer_header/header.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <link rel="stylesheet" href="/styles/project.css">
-  <link rel="stylesheet" href="/styles/var.css">
-  <title>Proyecto</title>
-</head>
-<body>
-  <header class="header-container" id="header"></header>
-  <main class="project-main">
-    <h1 class="title-lvl1">WisepiloGames: Una Colección de Juegos Web</h1>
-    <p class="text">Este proyecto es una colección de tres juegos web interactivos desarrollados desde cero para demostrar <strong>proficiencia en JavaScript nativo, diseño modular y patrones de desarrollo.</strong> La plataforma fue diseñada con una arquitectura escalable para asegurar componentes reutilizables y un código limpio.</p>
-    <h2 class="title-lvl2">Habilidades</h2>
-    <ul class="list-text text">
-      <li><strong>Arquitectura Modular (SPA-Like):</strong> Implementación de un sistema de carga dinámica (fetch en JS) para reutilizar Header y Footer (foot-head/), simulando un comportamiento de componente moderno y demostrando manejo de la estructura de la aplicación.</li>
-      <li><strong>Lógica de Negocio Compleja (JS Nativo):</strong> Desarrollo de la lógica de juego con clases (POO en JS) para <strong>separar responsabilidades</strong> (Lógica, UI, Control), como se ve en <strong>Geo-Grid</strong> y <strong>Pasapalabra</strong>.</li>
-      <li><strong>Manipulación de Datos y APIs:</strong> Gestión de archivos JSON como fuente de datos para los juegos y aplicación de lógica de filtrado por dificultad (<strong>Geo-Grid</strong>). Consumo de APIs externas para la carga dinámica de recursos (banderas).</li>
-      <li><strong>Normalización de Datos y UX:</strong> Implementación de una función de <strong>normalización de texto</strong> para respuestas de usuario (eliminar acentos, espacios, mayúsculas) en <strong>Pasapalabra</strong> y <strong>Geo-Grid</strong>, asegurando una mejor experiencia del usuario.</li>
-      <li><strong>Algoritmos y Lógica de IA:</strong> Desarrollo de una IA en <strong>Tic-Tac-Toe</strong> con estrategia de <em>Win-Block-Center</em> que prioriza la victoria y la defensa, mostrando habilidad en la <strong>creación de algoritmos de juego</strong>.</li>
-    </ul>
-    <h2 class="title-lvl2">Tecnologias</h2>
-    <ul class="list">
-      <li>
-        <img class="list-item-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg">
-      </li>
-      <li>
-        <img class="list-item-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg">
-      </li>
-      <li>
-        <img class="list-item-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg">
-      </li>
-    </ul>
-    <h2 class="title-lvl2">Enlaces</h2>
-    <ul class="list-text">
-      <li><a class="link" href="#" target="_blank" rel="noopener noreferrer">Github</a></li>
-      <li><a class="link" href="#" target="_blank" rel="noopener noreferrer">Donde probarlo</a></li>
-    </ul>
-  </main>
-  <script src="/scripts/buildContentProject.js" defer></script>
-  <footer class="footer-container" id="footer"></footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/footer_header/footer_header.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/210dc8e837.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/footer_header/footer.css" />
+    <link rel="stylesheet" href="/footer_header/header.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="stylesheet" href="/styles/project.css" />
+    <link rel="stylesheet" href="/styles/var.css" />
+    <title>Proyecto</title>
+  </head>
+  <body>
+    <header class="header-container" id="header"></header>
+    <main class="project-main">
+      <h1 class="title-lvl1">WisepiloGames: Una Colección de Juegos Web</h1>
+      <p class="text">
+        Este proyecto es una colección de tres juegos web interactivos
+        desarrollados desde cero para demostrar
+        <strong
+          >proficiencia en JavaScript nativo, diseño modular y patrones de
+          desarrollo.</strong
+        >
+        La plataforma fue diseñada con una arquitectura escalable para asegurar
+        componentes reutilizables y un código limpio.
+      </p>
+      <h2 class="title-lvl2">Habilidades</h2>
+      <ul class="list-text text">
+        <li>
+          <strong>Arquitectura Modular (SPA-Like):</strong> Implementación de un
+          sistema de carga dinámica (fetch en JS) para reutilizar Header y
+          Footer (foot-head/), simulando un comportamiento de componente moderno
+          y demostrando manejo de la estructura de la aplicación.
+        </li>
+        <li>
+          <strong>Lógica de Negocio Compleja (JS Nativo):</strong> Desarrollo de
+          la lógica de juego con clases (POO en JS) para
+          <strong>separar responsabilidades</strong> (Lógica, UI, Control), como
+          se ve en <strong>Geo-Grid</strong> y <strong>Pasapalabra</strong>.
+        </li>
+        <li>
+          <strong>Manipulación de Datos y APIs:</strong> Gestión de archivos
+          JSON como fuente de datos para los juegos y aplicación de lógica de
+          filtrado por dificultad (<strong>Geo-Grid</strong>). Consumo de APIs
+          externas para la carga dinámica de recursos (banderas).
+        </li>
+        <li>
+          <strong>Normalización de Datos y UX:</strong> Implementación de una
+          función de <strong>normalización de texto</strong> para respuestas de
+          usuario (eliminar acentos, espacios, mayúsculas) en
+          <strong>Pasapalabra</strong> y <strong>Geo-Grid</strong>, asegurando
+          una mejor experiencia del usuario.
+        </li>
+        <li>
+          <strong>Algoritmos y Lógica de IA:</strong> Desarrollo de una IA en
+          <strong>Tic-Tac-Toe</strong> con estrategia de
+          <em>Win-Block-Center</em> que prioriza la victoria y la defensa,
+          mostrando habilidad en la
+          <strong>creación de algoritmos de juego</strong>.
+        </li>
+      </ul>
+      <h2 class="title-lvl2">Tecnologias</h2>
+      <ul class="list">
+        <li>
+          <img
+            class="list-item-img"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+          />
+        </li>
+        <li>
+          <img
+            class="list-item-img"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+          />
+        </li>
+        <li>
+          <img
+            class="list-item-img"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+          />
+        </li>
+      </ul>
+      <h2 class="title-lvl2">Enlaces</h2>
+      <ul class="list-text">
+        <li>
+          <a class="link" href="#" target="_blank" rel="noopener noreferrer"
+            >Github</a
+          >
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank" rel="noopener noreferrer"
+            >Donde probarlo</a
+          >
+        </li>
+      </ul>
+    </main>
+    <script src="/scripts/buildContentProject.js" defer></script>
+    <footer class="footer-container" id="footer"></footer>
+  </body>
 </html>
