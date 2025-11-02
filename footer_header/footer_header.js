@@ -91,9 +91,27 @@ function setupThemeToggle() {
         sunIcon.style.display = "none";
       }
     });
-  } else {
-    console.error(
-      "Error: El botón de tema (#btn_theme) no se encontró después de cargar el header."
-    );
   }
 }
+
+function loadThemePreference() {
+  const savedTheme = localStorage.getItem("theme");
+  const body = document.body;
+
+  if (savedTheme === "dark") {
+    body.classList.add("dark-theme");
+
+    const moonIcon = document.querySelector(".moon-icon");
+    const sunIcon = document.querySelector(".sun-icon");
+
+    if (moonIcon && sunIcon) {
+      moonIcon.style.display = "none";
+      sunIcon.style.display = "block";
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadThemePreference();
+  setupThemeToggle();
+});
