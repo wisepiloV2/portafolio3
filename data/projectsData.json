@@ -114,6 +114,197 @@
           ]
         }
       ]
+    },
+    {
+      "page": "wisepiloblogs",
+            "data": [
+        {
+          "type": "title",
+          "level": 1,
+          "content": [
+            { "text": "WisepiloBlogs: Sistema de Gestion de Blogs" }
+          ]
+        },
+        {
+          "type": "p",
+          "content": [
+            { "text": "Una web de gestión de contenido (CMS/Blog) robusta y segura. Este proyecto fue creado para demostrar la capacidad de la creación de una arquitectura full-stack moderna, enfocada en la mitigación de riesgos de seguridad comunes y en la separación lógica de componentes." }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": [
+            { "text": "Algunos puntos a destacar" }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 3,
+          "content": [
+            { "text": "Arquitectura Limpia y Modular:" }
+          ]
+        },
+        {
+          "type": "list-text",
+          "items": [
+            {
+              "type": "li",
+              "content": [
+                { "text": "La aplicación sigue una" },
+                { "text": " arquitectura estratificada", "format":"strong" },
+                { "text": " estricta, dividiendo el código en capas modulares: Rutas, Middlewares, Controladores (Lógica de Negocio), y Modelos/DAO (Acceso a Datos). Esta estructura garantiza la escalabilidad, la mantenibilidad y facilita la adición de nuevas funcionalidades." }
+              ]
+            },
+            {
+              "type": "li",
+              "content": [
+                { "text": "La persistencia de datos se gestiona eficientemente con" },
+                { "text": " MySQL", "format":"strong"}, 
+                { "text": " y el" }, 
+                { "text": "Connection Pool", "format":"em"},  
+                {"text": " de" },
+                {"text": " mysql2/promise"}, 
+                {"text": " optimizando la concurrencia y el uso de recursos de la base de datos."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 3,
+          "content": [
+            { "text": "Seguridad en la Autenticación y Credenciales:" }
+          ]
+        },
+        {
+          "type": "list-text",
+          "items": [
+            {
+              "type": "li",
+              "content": [
+                { "text": "Autenticación sin Estado:", "format": "strong"},
+                { "text": " Se implementó" },
+                { "text": " JWT", "format": "strong" },
+                { "text": " para el manejo de sesiones, utilizando" },
+                { "text": " cookies httpOnly", "format": "em" },
+                {"text": " para proteger el"}, 
+                {"text":"token", "format":"em"}, 
+                {"text": "de sesión contra ataques XSS."}
+              ]
+            },
+            {
+              "type": "li",
+              "content": [
+                { "text": "Protección de Contraseñas:" , "format": "strong"},
+                { "text": " El" },
+                { "text": " hashing", "format":"em"},
+                { "text": " de contraseñas se realiza mediante"},
+                { "text": " bcryptjs", "format": "em" },
+                { "text": " con un factor de costo de 10, asegurando la máxima resistencia contra ataques de fuerza bruta y diccionarios." }
+              ]
+            },
+            {
+              "type": "li",
+              "content": [
+                { "text": "Se diseñó un flujo seguro de"},
+                { "text": " Recuperación de Contraseña", "format": "strong" },
+                { "text": " utilizando tokens de corta expiración para autenticar la solicitud de cambio." }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 3,
+          "content": [
+            { "text": "Defensa Activa contra Vulnerabilidades Web (XSS y Datos Corruptos):" }
+          ]
+        },
+        {
+          "type": "list-text",
+          "items": [
+            {
+              "type": "li",
+              "content": [
+                { "text": "Validación Estricta:", "format": "strong"},
+                { "text": " Se utilizó la librería" },
+                { "text": " Zod", "format": "strong" },
+                { "text": " para la validación de esquemas de datos entrantes en la capa de controladores, asegurando que los datos cumplan con el formato y las reglas antes de cualquier procesamiento." }
+              ]
+            },
+            {
+              "type": "li",
+              "content": [
+                { "text": "Sanitizado de Contenido:" , "format": "strong"},
+                { "text": " Se integró un" },
+                { "text": " middleware", "format":"em"},
+                { "text": " con"},
+                { "text": " sanitize-html", "format": "em" },
+                { "text": " para limpiar activamente el HTML del contenido del blog, eliminando etiquetas maliciosas y scripts, mitigando de forma crucial los ataques de Cross-Site Scripting (XSS)." }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 3,
+          "content": [
+            { "text": "Gestión de Medios y Archivos:" }
+          ]
+        },
+        {
+          "type": "list-text",
+          "items": [
+            {
+              "type": "li",
+              "content": [
+                { "text": "Se implementó"},
+                { "text": " Multer", "format": "strong" },
+                { "text": " para el manejo seguro de la subida de imágenes de resumen, aplicando filtros de tipo y límites de tamaño." }
+              ]
+            },
+            {
+              "type": "li",
+              "content": [
+                { "text": " El sistema incluye una lógica avanzada para procesar y almacenar" },
+                { "text": " imágenes Base64" , "format": "strong"},
+                { "text": " que pueden venir incrustadas en el cuerpo del artículo, convirtiéndolas a archivos estáticos en el servidor y actualizando sus rutas en el contenido." }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": [
+            { "text": "Tecnologias" }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+              { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" },
+              { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg" },
+              { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" },
+              { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
+              { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": [
+            { "text": "Enlaces" }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            { "type": "link", "href": "#", "content": "Repositorio" }
+          ]
+        }
+      ]
     }
   ]
 }

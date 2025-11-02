@@ -34,7 +34,7 @@
   color: inherit; 
   padding: 8px 12px; 
   border-radius: 6px;
-  transition: all 0.3s ease; 
+  transition: all 0.15s ease; 
 }
 
 .header-link:hover,

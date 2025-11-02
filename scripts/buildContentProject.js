@@ -122,7 +122,7 @@ class DomElementFactory {
 class PageRenderer {
   constructor() {
     this.elementMain = document.querySelector(".project-main");
-    this.storePages = ["wisepilogames"];
+    this.storePages = ["wisepilogames", "wisepiloblogs"];
     this.domFactory = new DomElementFactory();
     this.dataService = new ProjectDataService();
   }
