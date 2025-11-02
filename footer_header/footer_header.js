@@ -1,7 +1,3 @@
-function goToHome() {
-  window.location.href = "/index.html";
-}
-
 /**
  * @param {string} targetId
  */
@@ -64,8 +60,8 @@ function setupSmoothScrollListeners() {
   });
 }
 
-loadComponent(".header-container", "/footer_header/header.html");
-loadComponent(".footer-container", "/footer_header/footer.html");
+loadComponent(".header-container", "footer_header/header.html");
+loadComponent(".footer-container", "footer_header/footer.html");
 
 function setupThemeToggle() {
   const toggleButton = document.getElementById("btn_theme");
