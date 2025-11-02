@@ -1,6 +1,6 @@
 class ProjectDataService {
   async load() {
-    const res = await fetch("/data/projectsData.json");
+    const res = await fetch("data/projectsData.json");
     return await res.json();
   }
 }
